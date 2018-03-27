@@ -1,0 +1,289 @@
+body{
+	background-color: lightgrey;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/SansationLight.woff);
+}
+
+#menu{
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.logoImg{
+	width: 117px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.bigList{
+	text-align: center;
+	vertical-align: middle;
+	width: 50%;
+  	margin: 0 auto;
+  	display: inline-block;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  	min-width: 550px;
+}
+
+.buttonList{
+	display: inline;
+}
+
+.buttonList a{
+	font-size: 150%;
+	font-weight: bold;
+	font-family: myFirstFont;
+	color: white;
+    text-align: center;
+    padding: 4.5% 5%;
+    text-decoration: none;
+}
+
+.buttonList a:hover{
+	background-color: darkgrey;
+	cursor: pointer;
+}
+
+#showLoginDiv {
+    font-family: MyFirstFont;
+    width: 10%;
+    display: none;
+    float: right;
+}
+
+#homeImage{
+	margin: auto;
+	display: block;
+}
+
+#homeTextDiv{
+	text-align: center;
+	font-family: myFirstFont;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 125%;
+}
+
+#restartGameButton{
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+	align-items: center;
+	display: flex;
+}
+
+#restartGameDiv{
+	z-index: 10;
+	position: relative;
+	display: none;
+}
+
+#leaveGameDiv{
+	z-index: 10;
+	position: relative;
+	display: none;
+	padding-top: 25px;
+}
+
+#leaveGameButton{
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+	align-items: center;
+	display: flex;
+}
+
+#loginButton{
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-top: 20px;
+	float: left;
+	display: flex;
+}
+
+#rankbuttons{
+	width: 203px;
+	margin: 0 auto;
+}
+
+#singleplayerRankingButton{
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#multiplayerRankingButton{
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#multiplayerRankingProcessButton{
+	font-size: 13px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#process{
+	width: 255px;
+	margin: 0 auto;
+}
+#inputSizeRankings{
+	margin: 0 auto;
+}
+
+#wrongPasswordText{
+	font-size: 100%;
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	display: none;
+}
+
+#wrongBoardSizeText{
+	font-size: 100%;
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	display: none;
+}
+
+#rulesDiv{
+	font-family: myFirstFont;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 150%;
+	display: block;
+}
+
+#rulesDiv h1{
+	font-size: 190%;
+}
+
+.boardDiv{
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 35px;
+}
+
+.boardDiv img{
+	width: 80px;
+	height: 80px;
+}
+
+.cellDiv{
+	width: 90px;
+	display: inline-block;
+}
+
+.pieceDiv{
+	width: 90px;
+	display: inline-block;
+}
+
+#messageH1{
+	text-align: center;
+	padding-bottom: 5px;
+	font-family: MyFirstFont;
+}
+
+#gameFormDiv{
+	position: absolute;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 8px;
+	border-color: black;
+	border-style: solid;
+	padding: 10px;
+	margin-top: 30px;
+	font-family: MyFirstFont;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 350px;
+}
+
+#gameFormDiv h1{
+	font-size: 120%;
+}
+
+#userTitle{
+	margin-top: 0;
+	margin-bottom: 3px;
+}
+
+#startButton{
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	font-family: MyFirstFont;
+	font-weight: bold;
+	margin: 0 auto;
+	align-items: center;
+	display: flex;
+}
+
+#checkButton{
+	font-family: MyFirstFont;
+	font-weight: bold;
+	display: block;
+	float:left;
+}
+
+#userInput{
+	float: left;
+	width: 95px;
+	height: 25px;
+}
+
+#passwordInputDiv{
+	margin-left: 20px;
+	display: inline-block;
+}
+
+#passwordInput{
+	width: 95px;
+	height: 25px;
+}
+
+.pieceHovered{
+	filter: invert(100%);
+}
+
+.pieceDeleted{
+	visibility: hidden;
+}
+
+.rankings{
+	text-align:center;
+	font-family: MyFirstFont;
+	margin: 0 auto;
+	width: 60%;
+}
+
+.rankings table{
+	margin: 0 auto;
+}
+
+td,th {
+	border: 1px solid black;
+	padding: 8px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nim Game </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="nim.css">
+</head>
+<body onload="showFrontPage()">
+
+	<div id="menu">
+		<img class="logoImg" src="Images/logo.jpg" alt="logo" onclick="showFrontPage()">
+		<div class="bigList">
+			<ul class="buttonList">
+				<li class="buttonList"><a onclick="showGameForm(true, true)">Play</a></li>
+				<li class="buttonList"><a onclick="showRanks()">Ranks</a></li>
+				<li class="buttonList"><a onclick="showRules()">Rules</a></li>
+			</ul>
+		</div>
+		<div id="showLoginDiv">
+			<h3 id="showLoginText">Welcome!</h3>
+			<button id="logoutButton" onclick="logout()">Logout</button>
+		</div>
+	</div>
+	<hr>
+
+	<div id="homePageDiv">
+		<img id="homeImage" src="Images/logo.jpg" alt="logo">
+		<div id="homeTextDiv">
+			<p>The <b>Nim Game</b> it's a game of strategy where two players play by turns.
+			<br>
+			In each turn, the player has to take one or more pieces from one the stacks.
+			<br>
+			The game objective is to be the player to take the last piece of the board.
+			<br>
+			If you want to play, click on the "Play" button that is in the top of the page. Good luck!
+			<br>
+			If you want to check the ranking of the player's, you can click on the "Ranks" button and in case you have some question about the rules, you can see them by clicking in the "Rules" button.
+		</div>
+	</div>
+
+	<div id="gameFormDiv">
+		<div id="loginDiv">
+			<h1>USERNAME &amp; PASSWORD</h1>
+			<form id="userInputForm" action="javascript:void(0)">
+				<input id="userInput" type="text" placeholder="Username" name="username">
+				<div id="passwordInputDiv">
+					<input id="passwordInput" type="password" placeholder="Password" name="password">
+				</div>
+			</form>
+			<h5 id="wrongPasswordText">Wrong Password!</h5>
+			<button id="loginButton" onclick="login()">Login</button>
+		</div>
+		<div id="gameTypeDiv">
+			<h1>GAME MODE</h1>
+			<form id="gameTypeForm">
+				<input type="radio" name="gameTypeButton" value="singleplayer" onclick="showSingleplayerOptions()" checked> Against the Computer<br>
+				<input type="radio" name="gameTypeButton" value="multiplayer" onclick="showMultiplayerOptions()"> Online<br>
+			</form>
+		</div>
+		<div id="optionsDiv">
+			<div id="singleplayerOptionsDiv">
+				<h1>DIFFICULTY</h1>
+				<form id="difficultyForm" action="javascript:void(0)">
+					<input type="radio" name="difficultyButton" value="easy" checked> Easy<br>
+		  			<input type="radio" name="difficultyButton" value="normal"> Medium<br>
+		 			<input type="radio" name="difficultyButton" value="hard"> Hard<br>
+				</form>
+				<h1>FIRST PLAYER</h1>
+				<form id="playFirstForm" action="javascript:void(0)">
+					<input type="radio" name="playFirstButton" value="player" checked> Me<br>
+		  			<input type="radio" name="playFirstButton" value="pc"> Computer<br>
+				</form>
+			</div>
+			<div id="multiplayerOptionsDiv">
+				<h1>BOARD SIZE</h1>
+				<form id="boardSizeForm" action="javascript:void(0)">
+					<input type="text" placeholder="Ex.: 5" name="boardSizeInput"><br>
+				</form>
+				<h5 id="wrongBoardSizeText">Invalid board size!</h5>
+				<br>
+				<button id="startButton" onclick="playGame()">STARTS!</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="gameDiv"></div>
+
+	<div id="restartGameDiv">
+		<button id="restartGameButton" onclick="restartGame()">REVENGE!</button>
+	</div>
+
+	<div id="leaveGameDiv">
+		<button id="leaveGameButton" onclick="leaveGame()">QUIT</button>
+	</div>
+
+	<div id="rankingDiv">
+		<div id="rankbuttons">
+			<button id="singleplayerRankingButton" onclick="showSingleplayerRanks()">Against the Computer</button>
+			<button id="multiplayerRankingButton" onclick="showMultiplayerRanksBoardSizeInput()">Online</button>
+		</div>
+		<form id="boardSizeFormRanks" action="javascript:void(0)">
+			<div id="process">
+				<br>
+				<input id="inputSizeRankings" type="text" placeholder="Ex.: 5" name="boardSizeInputRanks">
+				<br>
+				<button id="multiplayerRankingProcessButton" onclick="showMultiplayerRanks(document.getElementById('boardSizeFormRanks').elements['boardSizeInputRanks'].value)">Processar</button>
+			</div>
+		</form>
+		<div id="tableRankingDiv" class='rankings'></div>
+	</div>
+
+	<div id="rulesDiv">
+		<h1>Rules</h1>
+		<p>	<b>1.</b> The game countains one or more stakcs of pieces, with a determined number of pieces in them;
+		<br>
+		<b>2.</b> The moves are made by turns, and in one turn only one player can play, and the player can take one or more pieces from one stack;
+		<br>
+		<b>3.</b> In the end, the player who takes the last piece of the game, wins.
+		</p>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>
