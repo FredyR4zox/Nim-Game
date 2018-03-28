@@ -11,6 +11,5 @@ Open server/index.js with node.js and client/index.html with your browser
 
 
 ### Authors
-* Ana Rita Santos Lopes da Costa - up201605706
-* Frederico Emanuel Almeida Lopes - up201604674
-* João Lucas Faria de Pires - up201606617
+* Frederico Emanuel Almeida Lopes - up201604674 - [FredyR4zox](https://www.github.com/FredyR4zox)
+* João Vasco Franchini de Oliveira Gomes Semblano - 201605518
