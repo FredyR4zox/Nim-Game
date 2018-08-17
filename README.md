@@ -7,7 +7,7 @@ The server was made using node.js and the client using HTML, CSS and JavaScript.
 
 
 ### Usage
-Open server/index.js with node.js and client/index.html with your browser.
+Open Server/index.js with node.js and Client/index.html with your browser.
 
 
 ### Authors
